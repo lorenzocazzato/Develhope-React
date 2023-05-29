@@ -9,7 +9,7 @@ ReactDOM.render(
   <div>
     <Hello />
     <Message />
-    <Welcome name="Lorenzo" age={25} />
+    <Welcome name="Lorenzo" />
     <Welcome2 />
   </div>,
   document.getElementById("root")
