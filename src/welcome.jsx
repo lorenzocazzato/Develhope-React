@@ -9,7 +9,7 @@ export default class Welcome extends React.Component {
       <div>
         <p>Welcome, {name}!</p>
 
-        {age > 18 && <Age age={age} />}
+        {age && <Age age={age} />}
       </div>
     );
   }
