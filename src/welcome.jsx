@@ -7,9 +7,8 @@ export default class Welcome extends React.Component {
 
     return (
       <div>
-        <p>Welcome, {name}!</p>
-
-        {age && <Age age={age} />}
+        <p>Welcome, {name}!</p>√{" "}
+        {age > 18 && age < 65 ? <Age age={age} /> : false}
       </div>
     );
   }
