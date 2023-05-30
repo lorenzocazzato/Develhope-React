@@ -4,7 +4,6 @@ import Hello from "./hello";
 import ReactDOM from "react-dom";
 import Welcome from "./welcome";
 import Welcome2 from "./welcome2";
-import Age from "./age";
 
 const strongName = <strong>Lorenzo</strong>;
 const age = 25;
