@@ -15,7 +15,7 @@ ReactDOM.render(
     <Message />
     <Welcome name={strongName} age={age} />
     <Welcome2 />
-    <Counter />
+    <Counter incremento={1} iniziale={0} intervallo={1000} />
   </div>,
   document.getElementById("root")
 );
