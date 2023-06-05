@@ -7,6 +7,7 @@ import Welcome2 from "./welcome2";
 import Counter from "./counter";
 import ClickCounter from "./clickcounter";
 import ClickTracker from "./clicktracker";
+import InteractiveWelcome from "./interactivewelcome";
 
 const strongName = <strong>Lorenzo</strong>;
 const age = 25;
@@ -20,6 +21,7 @@ ReactDOM.render(
     <Counter incremento={1} iniziale={0} intervallo={1000} />
     <ClickCounter incremento={1} iniziale={0} />
     <ClickTracker />
+    <InteractiveWelcome />
   </div>,
   document.getElementById("root")
 );
