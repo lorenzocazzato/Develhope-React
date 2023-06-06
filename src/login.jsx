@@ -17,12 +17,19 @@ export default class Login extends React.Component {
 
   handleButtonClick = (event) => {
     event.preventDefault();
-    const button1 = document.querySelector("#butt");
+    const button1 = document.querySelector("#buttsubmit");
     if (this.state.username.length && this.state.password.length) {
       button1.disabled = false;
     } else {
       button1.disabled = true;
     }
+  };
+
+  handleButtonReset = (event) => {
+    this.setState = {
+      username: "",
+      password: "",
+    };
   };
 
   render() {
@@ -47,11 +54,15 @@ export default class Login extends React.Component {
           />
 
           <button
-            id="butt"
+            id="buttsubmit"
             disabled={!this.state.username || !this.state.password}
             onClick={this.handleButtonClick}
           >
             Login
+          </button>
+
+          <button id="buttreset" onClick={this.handleButtonReset}>
+            Reset
           </button>
         </form>
       </div>
