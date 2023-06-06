@@ -9,6 +9,8 @@ import ClickCounter from "./clickcounter";
 import ClickTracker from "./clicktracker";
 import InteractiveWelcome from "./interactivewelcome";
 import Login from "./login";
+import UncontrolledLogin from "./uncontrolledlogin";
+
 const strongName = <strong>Lorenzo</strong>;
 const age = 25;
 
@@ -23,6 +25,7 @@ ReactDOM.render(
     <ClickTracker />
     <InteractiveWelcome />
     <Login />
+    <UncontrolledLogin />
   </div>,
   document.getElementById("root")
 );
