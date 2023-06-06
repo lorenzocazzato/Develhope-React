@@ -25,13 +25,6 @@ export default class Login extends React.Component {
     }
   };
 
-  handleButtonReset = (event) => {
-    this.setState = {
-      username: "",
-      password: "",
-    };
-  };
-
   render() {
     return (
       <div>
@@ -61,7 +54,7 @@ export default class Login extends React.Component {
             Login
           </button>
 
-          <button id="buttreset" onClick={this.handleButtonReset}>
+          <button id="buttreset" type="reset">
             Reset
           </button>
         </form>
