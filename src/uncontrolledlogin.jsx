@@ -6,6 +6,11 @@ export default class UncontrolledLogin extends React.Component {
     this.state = {
       isDisabled: true,
     };
+    this.usernameInputRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this.usernameInputRef.current.focus();
   }
 
   handleSubmit = (event) => {
@@ -24,7 +29,7 @@ export default class UncontrolledLogin extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="username">Username:</label>
-            <input type="text" name="username" />
+            <input type="text" name="username" ref={this.usernameInputRef} />
           </div>
           <div>
             <label htmlFor="password">Password:</label>
