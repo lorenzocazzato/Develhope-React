@@ -20,6 +20,11 @@ export default class TodoList extends React.Component {
     this.setState({ inputValue: " " });
   };
 
+  handleButtonReset = (event) => {
+    event.preventDefault();
+    this.setState({ items: [], inputValue: "" });
+  };
+
   render() {
     const { inputValue } = this.state;
     return (
@@ -35,6 +40,7 @@ export default class TodoList extends React.Component {
           value={inputValue}
           onChange={this.handleInputChange}
         />
+        <button onClick={this.handleButtonReset}>Reset</button>
       </div>
     );
   }
