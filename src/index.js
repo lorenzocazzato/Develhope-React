@@ -27,7 +27,20 @@ ReactDOM.render(
     <InteractiveWelcome />
     <Login />
     <UncontrolledLogin />
-    <TodoList />
+    <TodoList
+      render={(items, handleButtonRemove) => (
+        <ul>
+          {items.map((item, index) => (
+            <li key={index}>
+              <button onClick={(event) => handleButtonRemove(event, item)}>
+                Delete
+              </button>
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
+    />
   </div>,
   document.getElementById("root")
 );

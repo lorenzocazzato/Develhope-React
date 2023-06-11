@@ -17,12 +17,7 @@ export default class TodoList extends React.Component {
     let { items, inputValue } = this.state;
     const updatedItems = [...items, inputValue];
     this.setState({ items: updatedItems });
-    this.setState({ inputValue: " " });
-  };
-
-  handleButtonReset = (event) => {
-    event.preventDefault();
-    this.setState({ items: [], inputValue: "" });
+    this.setState({ inputValue: "" });
   };
 
   handleButtonRemove = (event, item) => {
@@ -30,28 +25,21 @@ export default class TodoList extends React.Component {
       items: prevState.items.filter((value) => value !== item),
     }));
   };
+
   render() {
     const { inputValue } = this.state;
+    const { render } = this.props;
+
     return (
       <div>
-        <ul>
-          {this.state.items.map((item, index) => (
-            <li key={index}>
-              <button onClick={(event) => this.handleButtonRemove(event, item)}>
-                Delete
-              </button>
+        {render(this.state.items, this.handleButtonRemove)}
 
-              {item}
-            </li>
-          ))}
-        </ul>
         <button onClick={this.handleButtonClick}>GO</button>
         <input
           type="text"
           value={inputValue}
           onChange={this.handleInputChange}
         />
-        <button onClick={this.handleButtonReset}>Reset</button>
       </div>
     );
   }
