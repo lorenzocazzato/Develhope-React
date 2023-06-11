@@ -11,6 +11,7 @@ import InteractiveWelcome from "./interactivewelcome";
 import Login from "./login";
 import UncontrolledLogin from "./uncontrolledlogin";
 import TodoList from "./todolist";
+import LanguageSelector from "./languageselector";
 
 const strongName = <strong>Lorenzo</strong>;
 const age = 25;
@@ -41,6 +42,7 @@ ReactDOM.render(
         </ul>
       )}
     />
+    <LanguageSelector />
   </div>,
   document.getElementById("root")
 );
