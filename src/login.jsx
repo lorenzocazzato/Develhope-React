@@ -16,6 +16,10 @@ export default class Login extends React.Component {
     this.props.onLogin({ username, password });
   };
 
+  handleReset = () => {
+    this.setState({ username: "", password: "" });
+  };
+
   render() {
     const { username, password } = this.state;
     const isDisabled = username === "" || password === "";
@@ -26,7 +30,6 @@ export default class Login extends React.Component {
           <label htmlFor="username">Username:</label>
           <input
             type="text"
-            id="username"
             name="username"
             value={username}
             onChange={this.handleInputChange}
@@ -34,7 +37,6 @@ export default class Login extends React.Component {
           <label htmlFor="password">Password:</label>
           <input
             type="password"
-            id="password"
             name="password"
             value={password}
             onChange={this.handleInputChange}
@@ -45,6 +47,9 @@ export default class Login extends React.Component {
             disabled={isDisabled}
           >
             Login
+          </button>
+          <button type="button" onClick={this.handleReset}>
+            Reset
           </button>
         </form>
       </div>
