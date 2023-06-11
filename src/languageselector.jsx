@@ -35,7 +35,11 @@ class DisplayLanguage extends React.Component {
   render() {
     return (
       <LanguageContext.Consumer>
-        {(language) => <div>Selected Language: {language}</div>}
+        {(selectedLanguage) => (
+          <div>
+            <h1>Selected Language: {selectedLanguage}</h1>
+          </div>
+        )}
       </LanguageContext.Consumer>
     );
   }
