@@ -13,36 +13,4 @@ import UncontrolledLogin from "./uncontrolledlogin";
 import TodoList from "./todolist";
 import LanguageSelector from "./languageselector";
 
-const strongName = <strong>Lorenzo</strong>;
-const age = 25;
-
-ReactDOM.render(
-  <div>
-    <Hello />
-    <Message />
-    <Welcome name={strongName} age={age} />
-    <Welcome2 />
-    <Counter incremento={1} iniziale={1} intervallo={1000} />
-    <ClickCounter incremento={1} iniziale={0} />
-    <ClickTracker />
-    <InteractiveWelcome />
-    <Login />
-    <UncontrolledLogin />
-    <TodoList
-      render={(items, handleButtonRemove) => (
-        <ul>
-          {items.map((item, index) => (
-            <li key={index}>
-              <button onClick={(event) => handleButtonRemove(event, item)}>
-                Delete
-              </button>
-              {item}
-            </li>
-          ))}
-        </ul>
-      )}
-    />
-    <LanguageSelector />
-  </div>,
-  document.getElementById("root")
-);
+ReactDOM.render(<div></div>, document.getElementById("root"));
