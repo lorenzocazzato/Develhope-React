@@ -11,5 +11,7 @@ export function GithubUser({ username }) {
       });
   }, [username]);
 
-  return <div>{data ? <h3>Git {data.name}</h3> : <h3>Loading...</h3>}</div>;
+  return (
+    <div>{data ? <h3> Utente: {data.name} </h3> : <h3>Loading...</h3>}</div>
+  );
 }
