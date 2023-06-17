@@ -1,3 +1,9 @@
+import { GithubUser } from "./Functions/githubuser";
+
 export function App() {
-  return <></>;
+  return (
+    <>
+      <GithubUser username="lorenzocazzato" />
+    </>
+  );
 }
